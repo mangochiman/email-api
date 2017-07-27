@@ -1,0 +1,10 @@
+class UserMailer < ActionMailer::Base
+  default from: "mangochiman@gmail.com"
+
+  #include SendGrid
+
+  def welcome_message
+    mail( :to => 'mangochiman@gmail.com',
+    :subject => 'Thanks for signing up for our amazing app' )
+  end
+end
