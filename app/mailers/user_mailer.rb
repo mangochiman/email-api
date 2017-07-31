@@ -1,10 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "mangochiman@gmail.com"
-
-  def welcome_message
-    mail( :to => 'mangochiman@gmail.com',
-    :subject => 'Thanks for signing up for our amazing app' )
-  end
+  default from: ""
 
   def send_feedback(sender, message, subject)
     @feedback = message
