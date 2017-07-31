@@ -8,8 +8,7 @@ class UserMailer < ActionMailer::Base
 
   def send_feedback(sender, message, subject)
     @feedback = message
-    mail( :to => 'mangochiman@gmail.com', :from => "#{sender}",
-    :subject => "#{subject}" )
+    mail( :to => "#{sender}", :subject => "#{subject}" )
   end
   
 end

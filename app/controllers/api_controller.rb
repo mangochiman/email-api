@@ -1,6 +1,9 @@
 class ApiController < ApplicationController
   def send_email
-    UserMailer.welcome_message.deliver
+    sender = params[:sender]
+    message = params[:message]
+    subject = params[:subject]
+    
     UserMailer.send_feedback(sender, message, subject).deliver
     render :text => "true" and return
   end
