@@ -6,7 +6,7 @@ class UserMailer < ActionMailer::Base
     @author_name = params[:author_name]
     @author_email = params[:author_email]
     
-    mail( :to => "#{params[:receiver]}", :subject => "#{params[:subject]}" )
+    mail(:to => "#{params[:receiver]}", :subject => "#{params[:subject]}")
   end
   
 end
