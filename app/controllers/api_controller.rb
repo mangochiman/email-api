@@ -1,10 +1,10 @@
 class ApiController < ApplicationController
   def send_email
-    receiver = params[:receiver]
-    message = params[:message]
-    subject = params[:subject]
+    #receiver = params[:receiver]
+    #message = params[:message]
+    #subject = params[:subject]
     
-    UserMailer.send_feedback(receiver, message, subject).deliver
+    UserMailer.send_feedback(params).deliver
     render :text => "true" and return
   end
 end
